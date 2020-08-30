@@ -1,0 +1,92 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+
+
+
+.road{
+    top: 50px;
+    width: 100%;
+    height: 80px;
+    border: 4px solid yellow;
+    background-color: black;
+    
+}
+.grass{
+    width: 100%;
+    height: 80px;
+    background-color: greenyellow;
+}
+.stripes{
+    position: relative;
+    top: 40%;
+    border: 2px dotted white;
+    width: 100%;
+    height: 10px;
+    
+}
+
+
+.car,.car-l{
+height: 50px;
+width: 100px;
+margin-top: -20px;
+position: absolute;
+background-color: black;
+background-size: cover;
+background-position: center;
+/* background-image: url(./index.jfif); */
+}
+
+.car-l:nth-child(1)
+{
+right: 10%;
+}
+.car-l:nth-child(2)
+{
+right: 30%;
+}
+.car-l:nth-child(3)
+{
+right: 40%;
+}
+
+.car:nth-child(1)
+{
+left: 10%;
+}
+.car:nth-child(2)
+{
+left: 30%;
+}
+.car:nth-child(3)
+{
+left: 40%;
+}
+.scoreboard{
+    height: 60px;
+    width: 200px;
+    border: 2px solid black;
+    float: right;
+    background-color: white;
+}
+
+.finish{
+    height: 60px;
+    background-color: orangered;
+}
+#character{
+    text-align: center;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+#character img{
+    height: 130px;
+    z-index: 10;
+}
