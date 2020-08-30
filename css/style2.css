@@ -70,16 +70,32 @@ left: 40%;
 }
 .scoreboard{
     height: 60px;
-    width: 200px;
-    border: 2px solid black;
+    width: 100px;
     float: right;
+    border: 1px solid white;
     background-color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.scoreboard h1{
+    margin-top: 10px;
 }
 
 .finish{
     height: 60px;
-    background-color: orangered;
+    background-color: rgb(0, 195, 255);
 }
+
+.flag{
+    text-align: center;
+}
+
+.flag img{
+    margin-top: 5px;
+    height: 50px;
+}
+
 #character{
     text-align: center;
     transition: 0.5s;
