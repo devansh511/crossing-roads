@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+.heading{
+    text-align: center;
+    padding: 3rem 0 7rem 0;
+    font-weight: bolder;
+    font-size: 40px;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.btn-wrapper{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    left: 37%;
+    background-color: rgb(255,255,255);
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(0,0,0,0.1),
+                15px 15px 15px rgba(0,0,0,0.1);
+}
+
+a{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 0.5rem 1rem;
+    font-family: 'Black Ops One', cursive;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 8px; 
+    transition: 0.5s;
+    margin: 1.5rem;
+    -webkit-transition: all 0.4s ease-out;
+}
+
+a:hover{
+    background-color: rgb(122, 89, 61);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 560px){
+
+    .xyz{
+        display: none;
+    }
+}
