@@ -19,7 +19,7 @@ body{
 }
 .grass{
     width: 100%;
-    height: 80px;
+    height: 75px;
     background-color: greenyellow;
 }
 .stripes{
@@ -69,7 +69,7 @@ left: 30%;
 left: 40%;
 }
 .scoreboard{
-    height: 60px;
+    height: 90px;
     width: 100px;
     float: right;
     border: 1px solid white;
@@ -79,11 +79,11 @@ left: 40%;
 }
 
 .scoreboard h1{
-    margin-top: 10px;
+    margin-top: 29px;
 }
 
 .finish{
-    height: 60px;
+    height: 75px;
     background-color: rgb(0, 195, 255);
 }
 
@@ -92,17 +92,13 @@ left: 40%;
 }
 
 .flag img{
-    margin-top: 5px;
+    margin-top: 15px;
     height: 50px;
 }
 
-#character{
-    text-align: center;
-    transition: 0.5s;
-    z-index: 10;
-}
-
-#character img{
-    height: 130px;
-    z-index: 10;
+#char{
+    position: absolute;
+    height: 120px;
+    width: 200px;
+    transition: 0.2s;
 }
