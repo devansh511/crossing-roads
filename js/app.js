@@ -16,42 +16,86 @@ var l_vehicles = ['002-truck', '005-crane', '006-crane truck', '009-forklift', '
 setInterval(()=>{
  
 
-    const car=document.querySelectorAll('.car');
+    const car=document.querySelectorAll('.car1');
 
     
 
     car.forEach((car)=>{
     
-    car.style.backgroundImage = "url('./assets/png/" + l_vehicles[Math.floor(Math.random() * l_vehicles.length)] + ".png')";
+    car.style.backgroundImage = "url('./assets/png/" + l_vehicles[0] + ".png')";
     var vpos=car.offsetLeft;
     
     var d=vpos+50;
     car.style.left= d+'px'
     if(d>window.innerWidth)
     {
-      car.style.left=50+'px'
+      car.style.left=0+'px';
       
     }
   
   })
-  },200)
+  },250)
+
+  setInterval(()=>{
+ 
+
+    const car2=document.querySelectorAll('.car2');
+
+    
+
+    car2.forEach((car)=>{
+    
+    car.style.backgroundImage = "url('./assets/png/" + l_vehicles[0] + ".png')";
+    var vpos=car.offsetLeft;
+    
+	var d=vpos+50;
+	car.style.left= d+'px';
+    if(d>window.innerWidth)
+    {
+      car.style.left=0+'px';
+      
+    }
+  
+  })
+  },250)
   
  // Right to Left Movement 
   setInterval(()=>{
    
   
-    const carl=document.querySelectorAll('.car-l');
+    const carl=document.querySelectorAll('.car-l1');
     
   carl.forEach((car)=>{
     
-    car.style.backgroundImage = "url('./assets/png/" + r_vehicles[Math.floor(Math.random() * r_vehicles.length)] + ".png')";
+    car.style.backgroundImage = "url('./assets/png/" + r_vehicles[0] + ".png')";
     var vpos=car.offsetLeft;
     
     var d=vpos-50;
     car.style.left= d+'px'
     if(d<0)
     {
-      car.style.left=window.innerWidth+100+'px'
+      car.style.left=window.innerWidth +'px'
+      
+    }
+  
+  })
+  },250)
+
+  setInterval(()=>{
+   
+  
+    const carl2=document.querySelectorAll('.car-l2');
+    
+  carl2.forEach((car)=>{
+    
+    car.style.backgroundImage = "url('./assets/png/" + r_vehicles[0] + ".png')";
+    var vpos=car.offsetLeft;
+    
+    var d=vpos-50;
+    car.style.left= d+'px'
+    if(d<0)
+    {
+      car.style.left=window.innerWidth+'px'
       
     }
   
@@ -66,29 +110,48 @@ window.onkeydown = detectKey;
 function detectKey(e) {
 
     var posLeft = document.getElementById('char').offsetLeft;
-    var posTop = document.getElementById('char').offsetTop;
+	var posTop = document.getElementById('char').offsetTop;
+	// var newLeft = document.getElementById('char').style.left;
+	// var newTop = document.getElementById('char').style.top;
 
     e = e || window.event;
-
     if (e.keyCode == '38') {
-        // up arrow
-
-        document.getElementById('char').style.top  = (posTop-25)+"px";
+		// up arrow
+		if(posTop < 0)
+		{
+			alert('You are about to leave the road');
+		}
+		else
+			document.getElementById('char').style.top = (posTop-25)+"px";
     }
     else if (e.keyCode == '40') {
-        // down arrow
-        	document.getElementById('char').style.top  = (posTop+25)+"px";
+		// down arrow
+		if(posTop > window.innerHeight )
+			alert('You are about to leave the road');
+		else
+			document.getElementById('char').style.top = (posTop+25)+"px";
     }
     else if (e.keyCode == '37') {
-       // left arrow
-        document.getElementById('char').style.left  = (posLeft-25)+"px";
+	   // left arrow
+		if(posLeft < 0)
+			alert('You are about to leave the road');
+	   else
+	   	document.getElementById('char').style.left = (posLeft-25)+"px";
     }
     else if (e.keyCode == '39') {
-       // right arrow
-        document.getElementById('char').style.left  = (posLeft+25)+"px";
+	   // right arrow
+	   if(posLeft > window.innerWidth)
+			alert('You are about to leave the road');
+		else
+			document.getElementById('char').style.left = (posLeft+25)+"px";
     }
 }  
 
 
-// Exiting the game
+//Stopwatch
 
+let time = 0;
+setInterval(() =>{
+	time += 1;
+	document.getElementById('seconds').innerHTML = time;
+}, 1000);
