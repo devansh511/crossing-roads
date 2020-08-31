@@ -10,6 +10,16 @@
             padding: 0%;
             box-sizing: border-box;
             
+            
+        }
+        .game{
+            
+            
+            height: 50vh;
+            width: 80vw;
+            margin-left: 10%;
+            
+
         }
        
         .road{
@@ -35,6 +45,7 @@
 
   
  .car,.car-l{
+    
     height: 50px;
     width: 100px;
     margin-top: -20px;
@@ -46,6 +57,19 @@
    
     
 }
+
+.road-crosser {
+    z-index: 1;
+    display: block;
+    position:absolute;
+    top: 250px;
+    left: 30px;
+  
+    width: 45px;
+    height: 45px;
+    
+}
+
 
 .car-l:nth-child(1)
 {
@@ -77,6 +101,14 @@
     width: 200px;
     border: 2px solid black;
     float: right;
+}
+#myId {
+   
+   
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transition: 0.2s;
 }
 
 
@@ -176,8 +208,10 @@
             </div>
     
         </div>
+        <img src="./index.jfif" class="road-crosser" alt="">
 
     </div>
+    
     <script src="./script.js"></script>
     
 </body>
