@@ -23,13 +23,16 @@ setInterval(()=>{
     car.forEach((car)=>{
     
     car.style.backgroundImage = "url('./assets/png/" + l_vehicles[0] + ".png')";
-    var vpos=car.offsetLeft;
+	
+	var vpos=car.offsetLeft;
     
     var d=vpos+50;
-    car.style.left= d+'px'
-    if(d>window.innerWidth)
-    {
-      car.style.left=0+'px';
+	
+	car.style.left= d+'px'
+	
+	if(d>window.innerWidth)
+	{
+      car.style.left= 0+'px';
       
     }
   
@@ -111,15 +114,12 @@ function detectKey(e) {
 
     var posLeft = document.getElementById('char').offsetLeft;
 	var posTop = document.getElementById('char').offsetTop;
-	// var newLeft = document.getElementById('char').style.left;
-	// var newTop = document.getElementById('char').style.top;
-
     e = e || window.event;
     if (e.keyCode == '38') {
 		// up arrow
-		if(posTop < 0)
+		if((posTop < 25 && posTop >= 0) || posTop < 0)
 		{
-			alert('You are about to leave the road');
+			success();
 		}
 		else
 			document.getElementById('char').style.top = (posTop-25)+"px";
@@ -155,3 +155,10 @@ setInterval(() =>{
 	time += 1;
 	document.getElementById('seconds').innerHTML = time;
 }, 1000);
+
+// Finish line
+
+function success() {
+	document.getElementsByClassName('content').style.display = 'block';
+	document.getElementsByClassName('game').style.opacity = '0.2';
+}
