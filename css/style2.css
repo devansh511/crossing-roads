@@ -6,9 +6,10 @@
 
 body{
     overflow: hidden;
+    font-family: 'Black Ops One', cursive;
 }
 
-.centre, .content{
+.centre,.centre-f,.content,.content-f{
     position: absolute;  
     top: 25%;
     left: 35%; 
@@ -16,7 +17,7 @@ body{
 }
 
 
-.content{
+.content,.content-f{
     display: none;
     width: 400px;
     height: 350px;
@@ -25,7 +26,7 @@ body{
     box-shadow: 0 2px 12px 0 rgba(0,0,0,0.4);
 }
 
-.header{
+.header,.header-f{
     height: 68px;
     background: #27ae60;
     overflow: hidden;
@@ -77,11 +78,6 @@ p{
     height: 1px;
     background: silver;
 }
-.close-btn a,.restart-btn a{
-    text-decoration: none;
-color: #27ae60;
-
-}
 .close-btn{
     text-decoration: none;
     position: absolute;
@@ -99,6 +95,13 @@ color: #27ae60;
     color: white;
     transition: 0.5s;
 }
+
+.restart-btn:hover{
+    background: #27ae60;
+    color: white;
+    transition: 0.5s;
+}
+
 .restart-btn{
 
     text-decoration: none;
@@ -108,6 +111,7 @@ color: #27ae60;
     border: 1px solid #27ae60;
     border-radius: 3px;
     color: #27ae60;
+    margin-right: 80px;
     padding: 8px 10px;
     font-size: 18px;
     cursor: pointer;
@@ -131,7 +135,7 @@ color: #27ae60;
     height: 75px;
     background-color: greenyellow;
 }
-.stripes{
+.stripe1,.stripe2,.stripe3,.stripe4{
     position: relative;
     top: 40%;
     border: 2px dotted white;
@@ -177,7 +181,7 @@ right: 43%;
 }
 .car-l2:nth-child(3)
 {
-right: 70%;
+right: 90%;
 }
 .car-l2:nth-child(4)
 {

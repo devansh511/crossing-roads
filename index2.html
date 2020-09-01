@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Crossing Roads</title>
 
@@ -15,19 +16,37 @@
         <div class="content">
             <div class="header">
                 <h2>Crossed the Roads!</h2>
-                <label for="click" class="fa fa-times"></label>
+                <label for="click" class="fa fa-times" id="cross"></label>
             </div>
             <label for="click" class="fa fa-check"></label>
-            <p>You have successfully completed the game!</p>
+            <p>Yeah! You got through the roads.</p>
             <p>Your score is: </p><span><p class="final-score">0</p></span>
 
             <p class="remark"></p>
             
             <div class="line"></div>
-            <button  class="close-btn"><a href="index.html">Close</a></button>
-            <button  class="restart-btn"><a href="index2.html">Restart</a></button>
+            <a href="index.html" class="close-btn">Get me home!</a>
+            <a href="index2.html" class="restart-btn">Play More!</a>
         </div>
     </div>  
+
+    <div class="center-f">
+        <div class="content-f">
+            <div class="header">
+                <h2>GAME OVER!</h2>
+                <label for="click" class="fa fa-times" id="cross"></label>
+            </div>
+            <label for="click" class="fa fa-check"></label>
+            <p>Wham! You got into the vehicle.</p>
+            <p>Your score is: </p><span><p class="final-score">0</p></span>
+
+            <p class="remark-f"></p>
+            
+            <div class="line"></div>
+            <a href="index.html" class="close-btn">Get me home!</a>
+            <a href="index2.html" class="restart-btn">Play More!</a>
+        </div>
+    </div>
 
     <div class="game" >
         <div class="finish">
@@ -45,18 +64,18 @@
 
 
         <div class="road">
-            <div class="stripes">
+            <div class="stripe1">
                 
-                <div class="car1">
+                <div class="car1" id="00">
 
                 </div>
-                <div class="car1">
+                <div class="car1" id="01">
 
                 </div>
-                <div class="car1">
+                <div class="car1" id="02">
 
                 </div>
-                <div class="car1">
+                <div class="car1" id="03">
 
                 </div>    
     
@@ -68,19 +87,19 @@
         </div>
         
         <div class="road">
-            <div class="stripes">
+            <div class="stripe2">
 
                 
-                <div class="car-l1">
+                <div class="car-l1" id="10">
 
                 </div>
-                <div class="car-l1">
+                <div class="car-l1" id="11">
 
                 </div>
-                <div class="car-l1">
+                <div class="car-l1" id="12">
 
                 </div>
-                <div class="car-l1">
+                <div class="car-l1" id="13">
 
                 </div>                
 
@@ -95,18 +114,18 @@
         </div>
         
         <div class="road">
-            <div class="stripes">
+            <div class="stripe3">
                
-                    <div class="car2">
+                    <div class="car2" id="20">
 
                     </div>
-                    <div class="car2">
+                    <div class="car2" id="21">
 
                     </div>
-                    <div class="car2">
+                    <div class="car2" id="22">
 
                     </div>
-                    <div class="car2">
+                    <div class="car2" id="23"> 
 
                     </div>
             </div>
@@ -120,18 +139,18 @@
         
         
         <div class="road">
-            <div class="stripes">
+            <div class="stripe4">
                 
-                <div class="car-l2">
+                <div class="car-l2" id="30">
 
                 </div>
-                <div class="car-l2">
+                <div class="car-l2" id="31">
 
                 </div>
-                <div class="car-l2">
+                <div class="car-l2" id="32">
 
                 </div>
-                <div class="car-l2">
+                <div class="car-l2" id="33">
 
                 </div>
                 
