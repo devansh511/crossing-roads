@@ -60,7 +60,7 @@ setInterval(()=>{
     }
   
   })
-  },250)
+  },100)
   
  // Right to Left Movement 
   setInterval(()=>{
@@ -109,7 +109,7 @@ setInterval(()=>{
 // Movement of character
 
 window.onkeydown = detectKey;
-
+var game=true;
 function detectKey(e) {
 
     var posLeft = document.getElementById('char').offsetLeft;
@@ -119,6 +119,7 @@ function detectKey(e) {
 		// up arrow
 		if((posTop < 25 && posTop >= 0) || posTop < 0)
 		{
+      game=false
 			success();
 		}
 		else
@@ -152,13 +153,55 @@ function detectKey(e) {
 
 let time = 0;
 setInterval(() =>{
-	time += 1;
-	document.getElementById('seconds').innerHTML = time;
+
+  if(game==true)
+  {
+    time += 1;
+    document.getElementById('seconds').innerHTML = time;
+  }
+
+
 }, 1000);
 
 // Finish line
 
 function success() {
-	document.getElementsByClassName('content').style.display = 'block';
-	document.getElementsByClassName('game').style.opacity = '0.2';
+	document.querySelector('.content').style.display = 'block';
+  document.querySelector('.content').style.backgroundPosition='fixed'
+  document.querySelector('.content').style.zIndex='2'
+  document.querySelector('.final-score').innerHTML=time;
+
+  
+  if(time<=20)
+  {
+    document.querySelector('.remark').innerHTML="<h4> Excellent!!!  </h4>"
+
+  }
+  else  if(time>20 && time<=50)
+  {
+    document.querySelector('.remark').innerHTML="<h4> Good.  </h4>"
+
+  }
+  
+  else  if(time>40 && time<=100)
+  {
+    document.querySelector('.remark').innerHTML="<h4> Thats bad my friend.  </h4>"
+
+  }
+  else{
+    document.querySelector('.remark').innerHTML="<h4> Very poor  :) </h4>"
+
+  }
 }
+
+
+//collision
+
+var player=document.getElementById('char');
+var playerlpos=player.offsetLeft;
+var playertpos=player.offsetTop;
+
+var car=document.querySelectorAll
+
+
+
