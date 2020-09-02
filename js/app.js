@@ -278,3 +278,40 @@ var playerdpos=player.getBoundingClientRect().bottom;
 }
 
 
+setInterval(car2,200);
+
+function car2(){
+  
+var car=document.querySelectorAll('.car2');
+
+  car.forEach((car)=>{
+
+    
+var player=document.getElementById('char');
+
+var playerlpos=player.getBoundingClientRect().left;
+var playertpos=player.getBoundingClientRect().top;
+var playerrpos=player.getBoundingClientRect().right;
+var playerdpos=player.getBoundingClientRect().bottom;
+
+
+    var ct=car.getBoundingClientRect().top;
+    var cd=car.getBoundingClientRect().bottom;
+    var cl=car.getBoundingClientRect().left;
+    var cr=car.getBoundingClientRect().right;
+    
+    console.log(playertpos,ct,cd,playerdpos)
+
+
+    
+    
+    if(((playertpos<=ct&&playerdpos>=cd)&&(playerlpos>=cl&&playerlpos<=cr))||((playertpos<=cd&&playerdpos>cd)&&(playerlpos>=cl&&playerlpos<=cr)))
+    {
+      
+      alert('game over')
+    }
+
+  })
+  
+}
+
