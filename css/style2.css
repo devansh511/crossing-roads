@@ -119,20 +119,16 @@ p{
     
 }
 
-.game{
-    height: 100vh;
-}
-
 .road{
     top: 50px;
     width: 100%;
-    height: 80px;
+    height: 70px;
     border: 4px solid yellow;
     background-color: rgb(51, 50, 50);
 }
 .grass{
     width: 100%;
-    height: 75px;
+    height: 70px;
     background-color: greenyellow;
 }
 .stripe1,.stripe2,.stripe3,.stripe4{

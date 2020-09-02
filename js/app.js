@@ -18,7 +18,7 @@ setInterval(()=>{
     
     var d=vpos+50;
 	
-	car.style.left= d+'px'
+	car.style.left= d+'px';
 	
 	if(d>window.innerWidth)
 	{
