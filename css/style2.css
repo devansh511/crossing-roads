@@ -181,7 +181,7 @@ right: 43%;
 }
 .car-l2:nth-child(3)
 {
-right: 90%;
+right: 75%;
 }
 .car-l2:nth-child(4)
 {
@@ -252,8 +252,8 @@ left: 96%;
 }
 
 #char{
+    height: 70px;
     position: absolute;
-    height: 100px;
     transition: 0.2s;
     left: 40%;
 }

@@ -1,6 +1,6 @@
 // Vehicles
 
-var r_vehicles = ['001-bulldozer', '003-truck', '004-truck', '008-fire truck', '022-truck', '020-tow truck', '016-mixer truck','010-garbage truck', '011-truck', '007-excavator' ];
+var r_vehicles = ['001-bulldozer', '003-truck', '004-truck', '008-fire truck', '022-truck', '020-tow truck', '016-mixer truck','010-garbage truck', '011-truck'];
 
 var l_vehicles = ['002-truck', '005-crane', '006-crane truck', '009-forklift', '012-truck', '015-road roller', '017-jeep', 'car', 'jeep', 'school-bus', 'sport-car', 'station-wagon', 'tourism'];
 
@@ -12,7 +12,7 @@ setInterval(()=>{
 
     car.forEach((car)=>{
     
-    car.style.backgroundImage = "url('./assets/png/" + l_vehicles[0] + ".png')";
+    car.style.backgroundImage = "url('./assets/png/school-bus.png')";
 	
 	var vpos=car.offsetLeft;
     
@@ -35,7 +35,7 @@ setInterval(()=>{
 
     car2.forEach((car)=>{
     
-    car.style.backgroundImage = "url('./assets/png/" + l_vehicles[0] + ".png')";
+    car.style.backgroundImage = "url('./assets/png/sport-car.png')";
     var vpos=car.offsetLeft;
     
 	var d=vpos+50;
@@ -56,7 +56,7 @@ setInterval(()=>{
 	
 	carl.forEach((car)=>{
     
-	car.style.backgroundImage = "url('./assets/png/" + r_vehicles[0] + ".png')";
+	car.style.backgroundImage = "url('./assets/png/022-truck.png')";
     var vpos=car.offsetLeft;
     
     var d=vpos-50;
@@ -75,7 +75,7 @@ setInterval(()=>{
 	
 	carl2.forEach((car)=>{
     
-    car.style.backgroundImage = "url('./assets/png/" + r_vehicles[0] + ".png')";
+    car.style.backgroundImage = "url('./assets/png/010-garbage truck.png')";
     var vpos=car.offsetLeft;
     
     var d=vpos-50;
@@ -283,7 +283,6 @@ setInterval(() => {
 		){
 			game = false; gameOver();
 		}
-		console.log(car00pos.x);
 }, 250);
 
 // Game Over
