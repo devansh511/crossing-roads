@@ -248,9 +248,17 @@ left: 96%;
 }
 
 #char{
+    top: 85%;
     height: 70px;
     position: absolute;
     transition: 0.2s;
-    top: 85%;
     left: 40%;
+}
+
+#char-2{
+    top: 85%;
+    height: 70px;
+    position: absolute;
+    transition: 0.2s;
+    left: 50%;
 }
