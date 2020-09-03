@@ -27,8 +27,7 @@ setInterval(()=>{
     }
   
   })
-  },250)
-
+  },350)
 setInterval(()=>{
  
 	const car2=document.querySelectorAll('.car2');
@@ -47,7 +46,7 @@ setInterval(()=>{
     }
   
   })
-  },250)
+  },350)
   
  // Right to Left Movement 
 
@@ -68,7 +67,7 @@ setInterval(()=>{
     }
   
   })
-  },250)
+  },350)
 
 setInterval(()=>{
 	const carl2=document.querySelectorAll('.car-l2');
@@ -87,7 +86,7 @@ setInterval(()=>{
     }
   
   })
-  },250)
+  },350)
 
 // Movement of character
 
@@ -176,26 +175,22 @@ setInterval(() => {
 	
 	var playerpos=document.getElementById('char').getBoundingClientRect();
 
-
+	
 	var car00pos = document.getElementById('00').getBoundingClientRect();
 	var car01pos = document.getElementById('01').getBoundingClientRect();
 	var car02pos = document.getElementById('02').getBoundingClientRect();
-	var car03pos = document.getElementById('03').getBoundingClientRect();
 
 	var car10pos = document.getElementById('10').getBoundingClientRect();
 	var car11pos = document.getElementById('11').getBoundingClientRect();
 	var car12pos = document.getElementById('12').getBoundingClientRect();
-	var car13pos = document.getElementById('13').getBoundingClientRect();
 
 	var car20pos = document.getElementById('20').getBoundingClientRect();
 	var car21pos = document.getElementById('21').getBoundingClientRect();
 	var car22pos = document.getElementById('22').getBoundingClientRect();
-	var car23pos = document.getElementById('23').getBoundingClientRect();
 
 	var car30pos = document.getElementById('30').getBoundingClientRect();
 	var car31pos = document.getElementById('31').getBoundingClientRect();
 	var car32pos = document.getElementById('32').getBoundingClientRect();
-	var car33pos = document.getElementById('33').getBoundingClientRect();
 	if(
 	(car00pos.x <= playerpos.x + playerpos.width)&&(car00pos.x + car00pos.width >= playerpos.x)&&(car00pos.y <= playerpos.y + playerpos.height)&&(car00pos.y + car00pos.height >= playerpos.y)
 	){
@@ -212,11 +207,6 @@ setInterval(() => {
 			game = false; gameOver();
 		}
 	else if(
-		(car03pos.x <= playerpos.x + playerpos.width)&&(car03pos.x + car03pos.width >= playerpos.x)&&(car03pos.y <= playerpos.y + playerpos.height)&&(car03pos.y + car01pos.height >= playerpos.y)
-		){
-			game = false; gameOver();
-		}	
-	else if(
 		(car10pos.x <= playerpos.x + playerpos.width)&&(car10pos.x + car10pos.width >= playerpos.x)&&(car10pos.y <= playerpos.y + playerpos.height)&&(car10pos.y + car10pos.height >= playerpos.y)
 		){
 			game = false; gameOver();
@@ -228,11 +218,6 @@ setInterval(() => {
 		}
 	else if(
 		(car12pos.x <= playerpos.x + playerpos.width)&&(car12pos.x + car12pos.width >= playerpos.x)&&(car12pos.y <= playerpos.y + playerpos.height)&&(car12pos.y + car12pos.height >= playerpos.y)
-		){
-			game = false; gameOver();
-		}
-	else if(
-		(car13pos.x <= playerpos.x + playerpos.width)&&(car13pos.x + car13pos.width >= playerpos.x)&&(car13pos.y <= playerpos.y + playerpos.height)&&(car13pos.y + car13pos.height >= playerpos.y)
 		){
 			game = false; gameOver();
 		}
@@ -252,11 +237,6 @@ setInterval(() => {
 			game = false; gameOver();
 		}
 	else if(
-		(car23pos.x <= playerpos.x + playerpos.width)&&(car23pos.x + car23pos.width >= playerpos.x)&&(car23pos.y <= playerpos.y + playerpos.height)&&(car23pos.y + car23pos.height >= playerpos.y)
-		){
-			game = false; gameOver();
-		}
-	else if(
 		(car30pos.x <= playerpos.x + playerpos.width)&&(car30pos.x + car30pos.width >= playerpos.x)&&(car30pos.y <= playerpos.y + playerpos.height)&&(car30pos.y + car30pos.height >= playerpos.y)
 		){
 			game = false; gameOver();
@@ -268,11 +248,6 @@ setInterval(() => {
 		}
 	else if(
 		(car32pos.x <= playerpos.x + playerpos.width)&&(car32pos.x + car32pos.width >= playerpos.x)&&(car32pos.y <= playerpos.y + playerpos.height)&&(car32pos.y + car32pos.height >= playerpos.y)
-		){
-			game = false; gameOver();
-		}
-	else if(
-		(car33pos.x <= playerpos.x + playerpos.width)&&(car33pos.x + car33pos.width >= playerpos.x)&&(car33pos.y <= playerpos.y + playerpos.height)&&(car33pos.y + car33pos.height >= playerpos.y)
 		){
 			game = false; gameOver();
 		}
