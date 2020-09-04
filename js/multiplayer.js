@@ -93,6 +93,8 @@ setInterval(()=>{
 
 window.onkeydown = detectKey;
 var game=true;
+var p1=false
+var p2=false
 function detectKey(e) {
 
     var posLeft2 = document.getElementById('char-2').offsetLeft;
@@ -106,7 +108,8 @@ function detectKey(e) {
         
 		if((posTop < 15 && posTop >= 0) || posTop < 0)
 		{
-      		game=false
+              game=false
+              p1=true
 			success();
 		}
 		else
@@ -118,7 +121,8 @@ function detectKey(e) {
         console.log('aajs')
 		if((posTop2 < 15 && posTop2 >= 0) || posTop2 < 0)
 		{
-      		game=false
+              game=false
+              p2=true;
 			success();
 		}
 		else
@@ -186,28 +190,28 @@ setInterval(() =>{
 // Finish line
 
 function success() {
-  document.querySelector('.content').style.display = 'block';
-  document.querySelector('.content').style.backgroundPosition='fixed';
-  document.querySelector('.content').style.zIndex='2';
-  document.querySelector('.final-score').innerHTML=time;
-  document.getElementsByClassName('game').style.opacity = '0.1';
+
+    if(p1==true)
+    {
+        document.querySelector('.content').style.display = 'block';
+        document.querySelector('.content').style.backgroundPosition='fixed';
+        document.querySelector('.content').style.zIndex='2';
+        document.querySelector('.final-score').innerHTML=time;
+        document.querySelector('.won').innerHTML="<p>Player 1 Won!<p>"
+
+    }
+    
+    if(p2==true)
+    {
+        document.querySelector('.content').style.display = 'block';
+        document.querySelector('.content').style.backgroundPosition='fixed';
+        document.querySelector('.content').style.zIndex='2';
+        document.querySelector('.final-score').innerHTML=time;
+        document.querySelector('.won').innerHTML="<p>Player 2 Won!<p>"
+
+    }
+
   
-  if(time<=7)
-  {
-	 document.querySelector('.remark').innerHTML="<h4> !!Excellent!!</h4>";
-  }
-  else  if(time>7 && time<=15)
-  {
-    document.querySelector('.remark').innerHTML="<h4> !Good!</h4>";
-  }
-  
-  else  if(time>15 && time<=28)
-  {
-    document.querySelector('.remark').innerHTML="<h4> You took too much time:|</h4>";
-  }
-  else{
-    document.querySelector('.remark').innerHTML="<h4> Very poor:(</h4>";
-  }
 }
 
 // Close the modal
@@ -221,7 +225,7 @@ cross.addEventListener('click',() =>{
 
 // Collision Detection
 
-setInterval(() => {
+var id=setInterval(() => {
 	
     var playerpos=document.getElementById('char').getBoundingClientRect();
     var playerpos2=document.getElementById('char-2').getBoundingClientRect();
@@ -471,8 +475,8 @@ function gameOver() {
 	document.querySelector('.content-f').style.zIndex='2';
     document.querySelector('.final-score').innerHTML=time;
     document.querySelector('.text').innerHTML='<p>Player 1 Won<p/>'
-	document.getElementsByClassName('game').style.opacity = '0.1';
-	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
+  document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
+    
 }
 
 function gameOver2() {
@@ -483,6 +487,6 @@ function gameOver2() {
 	document.querySelector('.content-f').style.zIndex='2';
     document.querySelector('.final-score').innerHTML=time;
     document.querySelector('.text').innerHTML='<p>Player 2 Won<p/>'
-	document.getElementsByClassName('game').style.opacity = '0.1';
-	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
-}
+
+
+    }
