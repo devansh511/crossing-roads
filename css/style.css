@@ -52,7 +52,11 @@ body{
     color: white;
     cursor: pointer;
 }
-
+.btn-wrapper p:hover{
+    background-color: rgb(122, 89, 61);
+    color: white;
+    cursor: pointer;   
+}
 .centre,.centre-f,.content,.content-f{
     position: absolute;  
     top: 25%;
