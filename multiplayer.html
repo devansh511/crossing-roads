@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/multiplayer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Crossing Roads</title>
+
+</head>
+<body>
+
+    <div class="center">
+        <div class="content">
+            <div class="header">
+                <h2>Crossed the Roads!</h2>
+                <label for="click" class="fa fa-times" id="cross"></label>
+            </div>
+            <label for="click" class="fa fa-check"></label>
+            <p class="won"></p>
+            <p>Your score is: </p><span><p class="final-score">0</p></span>
+
+            
+            <div class="line"></div>
+            <a href="index.html" class="close-btn">Get me home!</a>
+            <a href="multiplayer.html" class="restart-btn">Play More!</a>
+        </div>
+    </div>  
+
+    <div class="center-f">
+        <div class="content-f">
+            <div class="header">
+                <h2>GAME OVER!</h2>
+                <label for="click" class="fa fa-times" id="cross"></label>
+            </div>
+            <label for="click" class="fa fa-check"></label>
+            <p class="text" >Wham! You got into the vehicle.</p>
+            
+            <div class="line"></div>
+            <a href="index.html" class="close-btn">Get me home!</a>
+            <a href="index2.html" class="restart-btn">Play More!</a>
+        </div>
+    </div>
+
+    <div class="game" >
+        <div class="finish">
+            <div class="flag">
+                <img src="./assets/flag.png">
+                <div class="scoreboard">
+                    <h1 id="seconds">
+                        0
+                    </h1>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="road">
+            <div class="stripe1">
+                
+                <div class="car1" id="00">
+
+                </div>
+                <div class="car1" id="01">
+
+                </div>
+                <div class="car1" id="02">
+
+                </div>
+                <div class="car1" id="03">
+
+                </div>    
+    
+            </div>
+    
+        </div>
+        <div class="grass">
+
+        </div>
+        
+        <div class="road">
+            <div class="stripe2">
+
+                
+                <div class="car-l1" id="10">
+
+                </div>
+                <div class="car-l1" id="11">
+
+                </div>
+                <div class="car-l1" id="12">
+
+                </div>
+                <div class="car-l1" id="13">
+
+                </div>                
+
+
+            </div>
+                
+    
+        </div>
+
+        <div class="grass">
+
+        </div>
+        
+        <div class="road">
+            <div class="stripe3">
+               
+                    <div class="car2" id="20">
+
+                    </div>
+                    <div class="car2" id="21">
+
+                    </div>
+                    <div class="car2" id="22">
+
+                    </div>
+                    <div class="car2" id="23"> 
+
+                    </div>
+            </div>
+            
+    
+        </div>
+        
+        <div class="grass">
+
+        </div>
+        
+        
+        <div class="road">
+            <div class="stripe4">
+                
+                <div class="car-l2" id="30">
+
+                </div>
+                <div class="car-l2" id="31">
+
+                </div>
+                <div class="car-l2" id="32">
+
+                </div>
+                <div class="car-l2" id="33">
+
+                </div>
+                
+            </div>
+    
+        </div>
+        <img src="./assets/pepa.png" id="char">
+        <img src="./assets/pepa.png" id="char-2">
+    </div>
+
+    
+
+    <script src="./js/multiplayer.js"></script>
+    
+</body>
+</html>

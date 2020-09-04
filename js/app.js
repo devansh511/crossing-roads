@@ -93,6 +93,7 @@ setInterval(()=>{
 
 window.onkeydown = detectKey;
 var game=true;
+
 function detectKey(e) {
 
     var posLeft = document.getElementById('char').offsetLeft;
@@ -146,15 +147,15 @@ setInterval(() =>{
 // Finish line
 
 function success() {
-  document.querySelector('.content').style.display = 'block';
-  document.querySelector('.content').style.backgroundPosition='fixed';
-  document.querySelector('.content').style.zIndex='2';
-  document.querySelector('.final-score').innerHTML=time;
-  document.getElementsByClassName('game').style.opacity = '0.1';
-  
+	document.querySelector('.content').style.display = 'block';
+	document.querySelector('.content').style.backgroundPosition='fixed';
+	document.querySelector('.content').style.zIndex='2';
+	document.querySelector('.final-score').innerHTML=time;
+	document.getElementsByClassName('game').style.opacity = '0.1';
+	
   if(time<=7)
   {
-	 document.querySelector('.remark').innerHTML="<h4> !!Excellent!!</h4>";
+	 document.querySelector('.final-score').innerHTML="<h4> !!Excellent!!</h4>";
   }
   else  if(time>7 && time<=15)
   {
@@ -170,13 +171,20 @@ function success() {
   }
 }
 
+// Close the modal
+
+var modal = document.querySelectorAll('.center');
+var cross = document.getElementById('cross');
+cross.addEventListener('click',() =>{
+	modal.style.display = 'none';
+	modal.style.zIndex = '-1';
+});
+
 // Collision Detection
 
 setInterval(() => {
 	
 	var playerpos=document.getElementById('char').getBoundingClientRect();
-
-
 	var car00pos = document.getElementById('00').getBoundingClientRect();
 	var car01pos = document.getElementById('01').getBoundingClientRect();
 	var car02pos = document.getElementById('02').getBoundingClientRect();
@@ -284,8 +292,7 @@ function gameOver() {
 	document.querySelector('.content-f').style.display = 'block';
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
-	document.querySelector('.final-score').innerHTML='0';
-	document.getElementsByClassName('game').style.opacity = '0.1';
-
+	document.querySelector('.remark-f').innerHTML=time
+	
 	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
 }
