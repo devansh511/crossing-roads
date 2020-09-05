@@ -260,7 +260,5 @@ function gameOver() {
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
 	document.querySelector('.final-score').innerHTML='0';
-	document.getElementsByClassName('game').style.opacity = '0.1';
-
 	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
 }

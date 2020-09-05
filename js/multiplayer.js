@@ -208,20 +208,8 @@ function success() {
         document.querySelector('.content').style.zIndex='2';
         document.querySelector('.final-score').innerHTML=time;
         document.querySelector('.won').innerHTML="<p>Player 2 Won!<p>"
-
     }
-
-  
 }
-
-// Close the modal
-
-var modal = document.querySelectorAll('.center');
-var cross = document.getElementById('cross');
-cross.addEventListener('click',() =>{
-	modal.style.display = 'none';
-	modal.style.zIndex = '-1';
-});
 
 // Collision Detection
 
@@ -444,28 +432,7 @@ setInterval(() => {
 
 
 }, 250);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Game Over
-
-function hide(){
-    document.getElementById('char').remove()
-}
-
 
 function gameOver() {
 
@@ -480,13 +447,9 @@ function gameOver() {
 }
 
 function gameOver2() {
-
-    
 	document.querySelector('.content-f').style.display = 'block';
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
-    document.querySelector('.final-score').innerHTML=time;
+    document.querySelector('.final-score').innerHTML= time;
     document.querySelector('.text').innerHTML='<p>Player 2 Won<p/>'
-
-
-    }
+}
