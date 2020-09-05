@@ -213,7 +213,7 @@ function success() {
 
 // Collision Detection
 
-var id=setInterval(() => {
+setInterval(() => {
 	
     var playerpos=document.getElementById('char').getBoundingClientRect();
     var playerpos2=document.getElementById('char-2').getBoundingClientRect();
