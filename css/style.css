@@ -9,7 +9,6 @@ body{
     overflow: hidden;
 }
 
-
 .heading{
     text-align: center;
     padding: 3rem 0 7rem 0;
@@ -45,8 +44,6 @@ body{
     -webkit-transition: all 0.4s ease-out;
 }
 
-
-
 .btn-wrapper a:hover{
     background-color: rgb(122, 89, 61);
     color: white;
@@ -64,7 +61,6 @@ body{
     transform: translate(-50% -50%);
     font-family: 'Black Ops One', cursive;   
 }
-
 
 .content,.content-f{
     display: none;
@@ -104,18 +100,6 @@ body{
     margin: 30px 0 0 160px;
 }
 
-#cancel {
-    font-size: 2rem;
-    color: #27ae60;
-    font-weight: bold;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    padding: 13px 0 0 30px;
-    border-radius: 50%;
-    box-sizing: border-box;
-    margin: 30px 0 0 160px;
-}
 p{
     padding-top: 10px;
     font-size: 19px;
