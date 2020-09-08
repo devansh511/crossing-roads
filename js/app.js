@@ -1,8 +1,4 @@
-// Vehicles
 
-var r_vehicles = ['001-bulldozer', '003-truck', '004-truck', '008-fire truck', '022-truck', '020-tow truck', '016-mixer truck','010-garbage truck', '011-truck'];
-
-var l_vehicles = ['002-truck', '005-crane', '006-crane truck', '009-forklift', '012-truck', '015-road roller', '017-jeep', 'car', 'jeep', 'school-bus', 'sport-car', 'station-wagon', 'tourism'];
 
  // Left to right Movement
  
@@ -101,9 +97,9 @@ function detectKey(e) {
     e = e || window.event;
     if (e.keyCode == '38') {
 		// up arrow
-		if((posTop < 15 && posTop >= 0) || posTop < 0)
+		if((posTop < 20 && posTop >= 0) || posTop < 0)
 		{
-			  game=false
+      		game=false
 			success();
 		}
 		else
@@ -147,15 +143,14 @@ setInterval(() =>{
 // Finish line
 
 function success() {
-	document.querySelector('.content').style.display = 'block';
-	document.querySelector('.content').style.backgroundPosition='fixed';
-	document.querySelector('.content').style.zIndex='2';
-	document.querySelector('.final-score').innerHTML=time;
-	document.getElementsByClassName('game').style.opacity = '0.1';
-	
+  document.querySelector('.content').style.display = 'block';
+  document.querySelector('.content').style.backgroundPosition='fixed';
+  document.querySelector('.content').style.zIndex='2';
+  document.querySelector('.final-score').innerHTML=time;
+  
   if(time<=7)
   {
-	 document.querySelector('.final-score').innerHTML="<h4> !!Excellent!!</h4>";
+	 document.querySelector('.remark').innerHTML="<h4> !!Excellent!!</h4>";
   }
   else  if(time>7 && time<=15)
   {
@@ -171,20 +166,13 @@ function success() {
   }
 }
 
-// Close the modal
-
-var modal = document.querySelectorAll('.center');
-var cross = document.getElementById('cross');
-cross.addEventListener('click',() =>{
-	modal.style.display = 'none';
-	modal.style.zIndex = '-1';
-});
-
 // Collision Detection
 
 setInterval(() => {
 	
 	var playerpos=document.getElementById('char').getBoundingClientRect();
+
+
 	var car00pos = document.getElementById('00').getBoundingClientRect();
 	var car01pos = document.getElementById('01').getBoundingClientRect();
 	var car02pos = document.getElementById('02').getBoundingClientRect();
@@ -292,7 +280,7 @@ function gameOver() {
 	document.querySelector('.content-f').style.display = 'block';
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
-	document.querySelector('.remark-f').innerHTML=time
+	document.querySelector('.final-score').innerHTML='0';
 	
 	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
 }

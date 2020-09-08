@@ -150,7 +150,6 @@ function success() {
   document.querySelector('.content').style.backgroundPosition='fixed';
   document.querySelector('.content').style.zIndex='2';
   document.querySelector('.final-score').innerHTML=time;
-  document.getElementsByClassName('game').style.opacity = '0.1';
   
   if(time<=7)
   {
@@ -237,7 +236,6 @@ function gameOver() {
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
 	document.querySelector('.final-score').innerHTML='0';
-	document.getElementsByClassName('game').style.opacity = '0.1';
 
 	document.querySelector('.remark-f').innerHTML=" Visit a doctor soon! ";
 }

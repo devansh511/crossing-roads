@@ -228,7 +228,6 @@ cross.addEventListener('click',() =>{
 var id=setInterval(() => {
 	
     var playerpos=document.getElementById('char').getBoundingClientRect();
-    var playerpos2=document.getElementById('char-2').getBoundingClientRect();
     
 	var car00pos = document.getElementById('00').getBoundingClientRect();
 	var car01pos = document.getElementById('01').getBoundingClientRect();
@@ -462,9 +461,7 @@ setInterval(() => {
 
 // Game Over
 
-function hide(){
-    document.getElementById('char').remove()
-}
+
 
 
 function gameOver() {
@@ -473,9 +470,7 @@ function gameOver() {
 	document.querySelector('.content-f').style.display = 'block';
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
-    document.querySelector('.final-score').innerHTML=time;
     document.querySelector('.text').innerHTML='<p>Player 1 Won<p/>'
-  document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
     
 }
 
@@ -485,7 +480,6 @@ function gameOver2() {
 	document.querySelector('.content-f').style.display = 'block';
 	document.querySelector('.content-f').style.backgroundPosition='fixed';
 	document.querySelector('.content-f').style.zIndex='2';
-    document.querySelector('.final-score').innerHTML=time;
     document.querySelector('.text').innerHTML='<p>Player 2 Won<p/>'
 
 
