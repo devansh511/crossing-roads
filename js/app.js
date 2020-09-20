@@ -9,7 +9,7 @@ function game(speedl,speedr)
 
 	
 
-setInterval(()=>{
+var id = setInterval(()=>{
  
 	const car=document.querySelectorAll('.car1');
 
@@ -34,7 +34,7 @@ setInterval(()=>{
 
  // Right to Left Movement 
 
-setInterval(()=>{
+var id1 = setInterval(()=>{
 	const carl=document.querySelectorAll('.car-l1');
 	
 	carl.forEach((car)=>{
@@ -76,7 +76,7 @@ function detectKey(e) {
     }
     else if (e.keyCode == '40') {
 		// down arrow
-		if(posTop > window.innerHeight )
+		if(posTop > 550 )
 			alert('You are about to leave the road');
 		else
 			document.getElementById('char').style.top = (posTop+25)+"px";
@@ -90,7 +90,7 @@ function detectKey(e) {
     }
     else if (e.keyCode == '39') {
 	   // right arrow
-	   if(posLeft > window.innerWidth)
+	   if(posLeft > 1300)
 			alert('You are about to leave the road');
 		else
 			document.getElementById('char').style.left = (posLeft+25)+"px";
@@ -100,7 +100,7 @@ function detectKey(e) {
 //Stopwatch
 
 let time = 0;
-setInterval(() =>{
+var id2 = setInterval(() =>{
 
   if(game==true)
   {
@@ -139,7 +139,7 @@ function success() {
 // Collision Detection
 
 	
-setInterval(() => {
+var id3 = setInterval(() => {
 	
 	var playerpos=document.getElementById('char').getBoundingClientRect();
 	var car=document.querySelectorAll('.car');
@@ -171,4 +171,10 @@ function gameOver() {
 	document.querySelector('.final-score').innerHTML='0';
 	document.querySelector('.remark-f').innerHTML="<h4> Visit a doctor soon! </h4>";
 }
+}
+function allClear(){
+	clearInterval(id);
+	clearInterval(id1);
+	clearInterval(id2);
+	clearInterval(id3);
 }
