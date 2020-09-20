@@ -70,6 +70,7 @@ function detectKey(e) {
 		{
       		game=false
 			success();
+			allClear();
 		}
 		else
 			document.getElementById('char').style.top = (posTop-25)+"px";
@@ -155,6 +156,7 @@ var id3 = setInterval(() => {
 			)
 			{
 				game = false; gameOver();
+				allClear();
 			}
 	})
 
